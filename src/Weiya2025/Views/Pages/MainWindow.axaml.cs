@@ -99,7 +99,7 @@ namespace Weiya2025.Views.Pages
                         break;
                     //500 元 32 人
                     case Button btn when btn.Name!.Equals("btnTake2"):
-                        if (!_model.Taken1Users.Any() || _model.Taken1Users.Count()<32)
+                        if (!_model.Taken1Users.Any() || _model.Taken1Users.Count() < 32)
                         {
                             await DialogsHelper.WarningAsync(this, "請先抽出第一輪 '獎金 500 元 32 人'", string.Empty);
                             return;
@@ -200,13 +200,14 @@ namespace Weiya2025.Views.Pages
 
             foreach (var next in Enumerable.Range(0, take))
             {
-                var user = nextCollection
+                var users = nextCollection
                     //過濾這輪已經抽過的人
                     .Where(w => !currentRound.Any(t => t.Division == w.Division && t.Department == w.Department && t.Name == w.Name))
                     //打亂
-                    .OrderBy(o => Guid.NewGuid())
-                    //抽一個
-                    .First();
+                    .OrderBy(o => Guid.NewGuid());
+
+                //用亂數取得一個人
+                var user = users.Skip(new Random().Next(users.Count())).First();
 
                 //加入本輪清單
                 currentRound.Add(user);
