@@ -1,0 +1,237 @@
+<Window xmlns="https://github.com/avaloniaui"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+
+		xmlns:mdic="using:Material.Styles.Controls"
+		xmlns:mdi="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+		xmlns:vm="clr-namespace:Weiya2025.ViewModels"
+		xmlns:converters="clr-namespace:Weiya2025.Converters.MainWindow"
+
+		mc:Ignorable="d"
+		d:DesignWidth="800"
+		d:DesignHeight="950"
+
+		x:Class="Weiya2025.Views.Pages.MainWindow"
+		x:DataType="vm:MainWindowViewModel"
+
+		Title="2025 尾牙抽獎機"
+		Loaded="OnWindowLoaded"
+		WindowStartupLocation="CenterScreen"
+		WindowState="Maximized">
+
+	<Design.DataContext>
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
+
+	<Window.Resources>
+		<converters:TimeLabelConverter x:Key="TimeLabelConverter"/>
+		<converters:EnglishNameConverter x:Key="EnglishNameConverter"/>
+		<converters:ChineeseNameConverter x:Key="ChineeseNameConverter"/>
+	</Window.Resources>
+
+	<DockPanel Margin="10"
+			   LastChildFill="True">
+		<ScrollViewer AllowAutoHide="True">
+			<StackPanel HorizontalAlignment="Stretch">
+				<!-- 32抽 -->
+				<Label Content="第一輪 獎金 500 (32人)"
+					   FontSize="20"
+					   FontWeight="Bold"/>
+				<Border BorderBrush="#c8c8c8"
+						BorderThickness="1"
+						CornerRadius="5"
+						Height="400"
+						Padding="6">
+
+					<ItemsControl Margin="3"
+								  ItemsSource="{Binding Taken1Users}">
+						<ItemsControl.ItemsPanel>
+							<ItemsPanelTemplate>
+								<UniformGrid Columns="8" Rows="4"
+											 ColumnSpacing="4" RowSpacing="4" />
+							</ItemsPanelTemplate>
+						</ItemsControl.ItemsPanel>
+
+						<ItemsControl.ItemTemplate>
+							<DataTemplate>
+								<mdic:Card>
+									<StackPanel>
+										<TextBlock Classes="Headline6"
+												   FontSize="24"
+												   Text="{Binding Department}"/>
+
+										<TextBlock Classes="Body2"
+												   FontSize="20"
+												   Text="{Binding Name, Converter={StaticResource ChineeseNameConverter}, Mode=OneWay}"/>
+
+										<TextBlock FontSize="16"
+												   Text="{Binding Name, Converter={StaticResource EnglishNameConverter}, Mode=OneWay}"/>
+									</StackPanel>
+								</mdic:Card>
+							</DataTemplate>
+						</ItemsControl.ItemTemplate>
+					</ItemsControl>
+				</Border>
+				<Button Name="btnTake1"
+						Content="抽"
+						Background="#F17C67"
+						Foreground="#FFFFFF"
+						FontSize="20"
+						FontWeight="Bold"
+						Click="OnButtonClick"/>
+
+				<GridSplitter Height="1"
+							  Margin="0 10"/>
+
+				<!-- 32抽 -->
+				<Label Content="第二輪 獎金 500 (32人)"
+					   FontSize="20"
+					   FontWeight="Bold"/>
+				<Border BorderBrush="#c8c8c8"
+						BorderThickness="1"
+						CornerRadius="5"
+						Height="400"
+						Padding="6">
+
+					<ItemsControl Margin="3"
+								  ItemsSource="{Binding Taken2Users}">
+						<ItemsControl.ItemsPanel>
+							<ItemsPanelTemplate>
+								<UniformGrid Columns="8" Rows="4"
+											 ColumnSpacing="4" RowSpacing="4" />
+							</ItemsPanelTemplate>
+						</ItemsControl.ItemsPanel>
+
+						<ItemsControl.ItemTemplate>
+							<DataTemplate>
+								<mdic:Card>
+									<StackPanel>
+										<TextBlock Classes="Headline6"
+												   FontSize="24"
+												   Text="{Binding Department}"/>
+
+										<TextBlock Classes="Body2"
+												   FontSize="20"
+												   Text="{Binding Name, Converter={StaticResource ChineeseNameConverter}, Mode=OneWay}"/>
+
+										<TextBlock FontSize="16"
+												   Text="{Binding Name, Converter={StaticResource EnglishNameConverter}, Mode=OneWay}"/>
+									</StackPanel>
+								</mdic:Card>
+							</DataTemplate>
+						</ItemsControl.ItemTemplate>
+					</ItemsControl>
+				</Border>
+				<Button Name="btnTake2"
+						Content="抽"
+						Background="#F17C67"
+						Foreground="#FFFFFF"
+						FontSize="20"
+						FontWeight="Bold"
+						Click="OnButtonClick"/>
+
+				<GridSplitter Height="1"
+							  Margin="0 10"/>
+
+				<!-- 10抽 -->
+				<Label Content="第三輪 獎金 1000 (10人)"
+					   FontSize="20"
+					   FontWeight="Bold"/>
+				<Border BorderBrush="#c8c8c8"
+						BorderThickness="1"
+						CornerRadius="5"
+						Height="400"
+						Padding="6">
+
+					<ItemsControl Margin="3"
+								  ItemsSource="{Binding Taken3Users}">
+						<ItemsControl.ItemsPanel>
+							<ItemsPanelTemplate>
+								<UniformGrid Columns="8" Rows="4"
+											 ColumnSpacing="4" RowSpacing="4" />
+							</ItemsPanelTemplate>
+						</ItemsControl.ItemsPanel>
+
+						<ItemsControl.ItemTemplate>
+							<DataTemplate>
+								<mdic:Card>
+									<StackPanel>
+										<TextBlock Classes="Headline6"
+												   FontSize="24"
+												   Text="{Binding Department}"/>
+
+										<TextBlock Classes="Body2"
+												   FontSize="20"
+												   Text="{Binding Name, Converter={StaticResource ChineeseNameConverter}, Mode=OneWay}"/>
+
+										<TextBlock FontSize="16"
+												   Text="{Binding Name, Converter={StaticResource EnglishNameConverter}, Mode=OneWay}"/>
+									</StackPanel>
+								</mdic:Card>
+							</DataTemplate>
+						</ItemsControl.ItemTemplate>
+					</ItemsControl>
+				</Border>
+				<Button  Name="btnTake3"
+						 Content="抽"
+						 Background="#F17C67"
+						 Foreground="#FFFFFF"
+						 FontSize="20"
+						 FontWeight="Bold"
+						 Click="OnButtonClick"/>
+
+				<GridSplitter Height="1"
+							  Margin="0 10"/>
+
+				<!-- 10抽 -->
+				<Label Content="第四輪 獎金 1000 (10人)"
+					   FontSize="20"
+					   FontWeight="Bold"/>
+				<Border BorderBrush="#c8c8c8"
+						BorderThickness="1"
+						CornerRadius="5"
+						Height="400"
+						Padding="6">
+
+					<ItemsControl Margin="3"
+								  ItemsSource="{Binding Taken4Users}">
+						<ItemsControl.ItemsPanel>
+							<ItemsPanelTemplate>
+								<UniformGrid Columns="8" Rows="4"
+											 ColumnSpacing="4" RowSpacing="4" />
+							</ItemsPanelTemplate>
+						</ItemsControl.ItemsPanel>
+
+						<ItemsControl.ItemTemplate>
+							<DataTemplate>
+								<mdic:Card>
+									<StackPanel>
+										<TextBlock Classes="Headline6"
+												   FontSize="24"
+												   Text="{Binding Department}"/>
+
+										<TextBlock Classes="Body2"
+												   FontSize="20"
+												   Text="{Binding Name, Converter={StaticResource ChineeseNameConverter}, Mode=OneWay}"/>
+
+										<TextBlock FontSize="16"
+												   Text="{Binding Name, Converter={StaticResource EnglishNameConverter}, Mode=OneWay}"/>
+									</StackPanel>
+								</mdic:Card>
+							</DataTemplate>
+						</ItemsControl.ItemTemplate>
+					</ItemsControl>
+				</Border>
+				<Button  Name="btnTake4"
+						 Content="抽"
+						 Background="#F17C67"
+						 Foreground="#FFFFFF"
+						 FontSize="20"
+						 FontWeight="Bold"
+						 Click="OnButtonClick"/>
+			</StackPanel>
+		</ScrollViewer>
+	</DockPanel>
+
+</Window>

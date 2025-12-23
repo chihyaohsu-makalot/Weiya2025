@@ -1,0 +1,14 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:themes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles"
+			 xmlns:mdi="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+			 
+             x:Class="Weiya2025.Views.Shared.App"
+             RequestedThemeVariant="Default">
+	<!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+	<Application.Styles>
+		<themes:MaterialTheme BaseTheme="Light" PrimaryColor="DeepOrange" SecondaryColor="Indigo" />
+		<mdi:MaterialIconStyles />
+	</Application.Styles>
+</Application>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ask_auth_application" xml:space="preserve">
+    <value>您是否要向服務擁有者申請授權 ??</value>
+  </data>
+  <data name="btn_leave_app" xml:space="preserve">
+    <value>離開本應用程式</value>
+  </data>
+  <data name="btn_signin_with_ad" xml:space="preserve">
+    <value>使用本機帳號登入</value>
+  </data>
+  <data name="btn_singin" xml:space="preserve">
+    <value>登入</value>
+  </data>
+  <data name="current_language" xml:space="preserve">
+    <value>正在使用繁體中文</value>
+  </data>
+  <data name="error_auth" xml:space="preserve">
+    <value>授權失敗</value>
+  </data>
+  <data name="error_auth_apply" xml:space="preserve">
+    <value>授權申請失敗</value>
+  </data>
+  <data name="error_contact_developer" xml:space="preserve">
+    <value>請直接聯繫開發人員 直撥分機 #2572</value>
+  </data>
+  <data name="error_no_access_token" xml:space="preserve">
+    <value>無法取得身分權杖</value>
+  </data>
+  <data name="error_no_challenge_code" xml:space="preserve">
+    <value>無法取得身分交換權杖</value>
+  </data>
+  <data name="error_other" xml:space="preserve">
+    <value>系統錯誤, 請聯絡開發人員</value>
+  </data>
+  <data name="error_signin" xml:space="preserve">
+    <value>登入失敗</value>
+  </data>
+  <data name="error_signin_empty_account" xml:space="preserve">
+    <value>帳號不可為空</value>
+  </data>
+  <data name="error_signin_empty_password" xml:space="preserve">
+    <value>密碼不可為空</value>
+  </data>
+  <data name="error_token_expired" xml:space="preserve">
+    <value>身分權杖已逾時</value>
+  </data>
+  <data name="http_401" xml:space="preserve">
+    <value>身分驗證錯誤</value>
+  </data>
+  <data name="http_403" xml:space="preserve">
+    <value>權限不足</value>
+  </data>
+  <data name="http_500" xml:space="preserve">
+    <value>內部發生錯誤, 請聯絡開發人員</value>
+  </data>
+  <data name="info_auth_application" xml:space="preserve">
+    <value>授權申請單</value>
+  </data>
+  <data name="info_success_auth_apply" xml:space="preserve">
+    <value>授權申請通過後即可重新登入, 如果有緊急需要 可以直撥分機 #2572</value>
+  </data>
+  <data name="label_form_auth_verify_modal_title" xml:space="preserve">
+    <value>身分驗證</value>
+  </data>
+  <data name="label_signin_account" xml:space="preserve">
+    <value>帳號</value>
+  </data>
+  <data name="label_signin_password" xml:space="preserve">
+    <value>密碼</value>
+  </data>
+  <data name="success_auth_apply" xml:space="preserve">
+    <value>授權申請成功</value>
+  </data>
+  <data name="success_signin" xml:space="preserve">
+    <value>歡迎回來</value>
+  </data>
+  <data name="wait_processing" xml:space="preserve">
+    <value>作業中</value>
+  </data>
+  <data name="wait_signin" xml:space="preserve">
+    <value>登入中, 請稍後 ...</value>
+  </data>
+  <data name="wait_waiting" xml:space="preserve">
+    <value>請稍後 ...</value>
+  </data>
+  <data name="warn_redirect_auth_application" xml:space="preserve">
+    <value>正在為您轉跳至授權申請單 ...</value>
+  </data>
+</root>
