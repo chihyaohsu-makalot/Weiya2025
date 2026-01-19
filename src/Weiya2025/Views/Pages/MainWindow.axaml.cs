@@ -86,9 +86,9 @@ namespace Weiya2025.Views.Pages
             {
                 switch (sender)
                 {
-                    //500 元 30 人
+                    //500 元 31 人
                     case Button btn when btn.Name!.Equals("btnTake1"):
-                        foreach (var user in SelectUser(30, _model.Taken1Users.Count))
+                        foreach (var user in SelectUser(31, _model.Taken1Users.Count))
                         {
                             await PrintAndSaveUsers(user, u =>
                             {
@@ -99,9 +99,9 @@ namespace Weiya2025.Views.Pages
                         break;
                     //500 元 31 人
                     case Button btn when btn.Name!.Equals("btnTake2"):
-                        if (!_model.Taken1Users.Any() || _model.Taken1Users.Count() < 30)
+                        if (!_model.Taken1Users.Any() || _model.Taken1Users.Count() < 31)
                         {
-                            await DialogsHelper.WarningAsync(this, "請先抽出第一輪 '獎金 500 元 30 人'", string.Empty);
+                            await DialogsHelper.WarningAsync(this, "請先抽出第一輪 '獎金 500 元 31 人'", string.Empty);
                             return;
                         }
 

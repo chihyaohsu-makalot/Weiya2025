@@ -34,8 +34,8 @@
 			   LastChildFill="True">
 		<ScrollViewer AllowAutoHide="True">
 			<StackPanel HorizontalAlignment="Stretch">
-				<!-- 30抽 -->
-				<Label Content="第一輪 獎金 500 (30人)"
+				<!-- 31抽 -->
+				<Label Content="第一輪 獎金 500 (31人)"
 					   FontSize="20"
 					   FontWeight="Bold"/>
 				<Border BorderBrush="#c8c8c8"
